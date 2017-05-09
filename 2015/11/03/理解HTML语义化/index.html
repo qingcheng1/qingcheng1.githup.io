@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>李佳鑫的博客</title>
+  <title>理解HTML语义化 | 李佳鑫的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="李佳鑫的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="1、什么是HTML语义化？ 基本上都是围绕着几个主要的标签，像标题（H1~H6）、列表（li）、强调（strong em）等等  根据内容的结构化（内容语义化），选择合适的标签（代码语义化）便于开发者阅读和写出更优雅的代码的同时让浏览器的爬虫和机器很好地解析。   2、为什么要语义化？ 为了在没有CSS的情况下，页面也能呈现出很好地内容结构、代码结构:为了裸奔时好看；  用户体验：例如title、">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="理解HTML语义化">
+<meta property="og:url" content="http://yoursite.com/2015/11/03/理解HTML语义化/index.html">
 <meta property="og:site_name" content="李佳鑫的博客">
+<meta property="og:description" content="1、什么是HTML语义化？ 基本上都是围绕着几个主要的标签，像标题（H1~H6）、列表（li）、强调（strong em）等等  根据内容的结构化（内容语义化），选择合适的标签（代码语义化）便于开发者阅读和写出更优雅的代码的同时让浏览器的爬虫和机器很好地解析。   2、为什么要语义化？ 为了在没有CSS的情况下，页面也能呈现出很好地内容结构、代码结构:为了裸奔时好看；  用户体验：例如title、">
+<meta property="og:updated_time" content="2017-05-09T07:00:38.358Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="李佳鑫的博客">
+<meta name="twitter:title" content="理解HTML语义化">
+<meta name="twitter:description" content="1、什么是HTML语义化？ 基本上都是围绕着几个主要的标签，像标题（H1~H6）、列表（li）、强调（strong em）等等  根据内容的结构化（内容语义化），选择合适的标签（代码语义化）便于开发者阅读和写出更优雅的代码的同时让浏览器的爬虫和机器很好地解析。   2、为什么要语义化？ 为了在没有CSS的情况下，页面也能呈现出很好地内容结构、代码结构:为了裸奔时好看；  用户体验：例如title、">
   
     <link rel="alternative" href="/atom.xml" title="李佳鑫的博客" type="application/atom+xml">
   
@@ -149,16 +154,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-理解HTML语义化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-理解HTML语义化" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/03/理解HTML语义化/">理解HTML语义化</a>
+    <h1 class="article-title" itemprop="name">
+      理解HTML语义化
     </h1>
   
 
@@ -201,151 +204,26 @@
       
 
       
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2015/11/03/理解HTML语义化/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-三大家族" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/09/13/三大家族/">三大家族</a>
-    </h1>
-  
-
-        
-        <a href="/2014/09/13/三大家族/" class="archive-article-date">
-  	<time datetime="2014-09-13T02:48:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-09-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="offset家族特点"><a href="#offset家族特点" class="headerlink" title="offset家族特点"></a>offset家族特点</h2><ul>
-<li>只能取值，不能设置值</li>
-<li>获取的结果是数值，不是字符</li>
-<li>获取的时候不需要style</li>
-</ul>
-<p><img src="http://upload-images.jianshu.io/upload_images/3793508-27a9b36ab2059cbc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图解1"></p>
-<p>网页可见区域宽： document.body.clientWidth;</p>
-<p>网页可见区域高： document.body.clientHeight;</p>
-<p>网页可见区域宽： document.body.offsetWidth (包括边线的宽);</p>
-<p>网页可见区域高： document.body.offsetHeight (包括边线的宽);</p>
-<p>网页正文全文宽： document.body.scrollWidth;</p>
-<p>网页正文全文高： document.body.scrollHeight;</p>
-<p>网页被卷去的高： document.body.scrollTop;</p>
-<p>网页被卷去的左： document.body.scrollLeft;</p>
-<h2 id="offsetWidth-和-offsetHeight"><a href="#offsetWidth-和-offsetHeight" class="headerlink" title="offsetWidth 和 offsetHeight"></a>offsetWidth 和 offsetHeight</h2><ul>
-<li>获取对象自身的宽度和高度 ，包括内容、边框和内边距，即：offsetWidth = width + border + padding</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">div&#123;</div><div class="line">   width: 300px; border-right:2px solid #ccc; padding:10px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>注意：和 div.style.width 的区别，其只能获取到行内的数值</p>
-<h3 id="offsetLeft-和-offsetTop"><a href="#offsetLeft-和-offsetTop" class="headerlink" title="offsetLeft 和 offsetTop"></a>offsetLeft 和 offsetTop</h3><ul>
-<li>距离第一个有定位的父级盒子左边和上边的距离</li>
-<li>父级盒子必须要有定位，如果没有，则最终以body为准！</li>
-<li><strong>offsetLeft 从父亲的padding开始算 父亲的border不算.即：从子盒子边框到定位父盒子边框的距离。</strong></li>
-</ul>
-<h2 id="—————–-scroll-———————"><a href="#—————–-scroll-———————" class="headerlink" title="—————– scroll ———————"></a>—————– scroll ———————</h2><h2 id="scroll家族"><a href="#scroll家族" class="headerlink" title="scroll家族"></a>scroll家族</h2><p>基本概念</p>
-<p>网页正文全文宽： document.body.scrollWidth;</p>
-<p>网页正文全文高： document.body.scrollHeight;</p>
-<p>网页被卷去的高： document.body.scrollTop;</p>
-<p>网页被卷去的左： document.body.scrollLeft;</p>
-<p>在实际开发中使用比较多的就是scrollTop，如下图：<br><img src="http://upload-images.jianshu.io/upload_images/3793508-55fef5ae3ce8fd4b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图解2"></p>
-<h3 id="处理scroll家族浏览器适配问题"><a href="#处理scroll家族浏览器适配问题" class="headerlink" title="处理scroll家族浏览器适配问题"></a>处理scroll家族浏览器适配问题</h3><ul>
-<li><p>ie9+ 和 最新浏览器</p>
-<p> <code>window.pageXOffset; （scrollLeft）</code></p>
-<p> <code>window.pageYOffset; （scrollTop）</code></p>
-</li>
-<li><p>Firefox浏览器 和 其他浏览器</p>
-<p><code>document.documentElement.scrollTop;</code></p>
-</li>
-<li><p>Chrome浏览器 和 没有声明 DTD <doctype></doctype></p>
-<p><code>document.body.scrollTop;</code></p>
-</li>
-<li><p>兼容写法</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var scrollTop = window.pageYOffset || </div><div class="line">document.documentElement.scrollTop || document.body.scrollTop || 0; </div><div class="line">var scrollLeft = window.pageXOffset || </div><div class="line">document.documentElement.scrollLeft || document.body.scrollLeft || 0;</div></pre></td></tr></table></figure>
-<h3 id="scrollTo-x-y"><a href="#scrollTo-x-y" class="headerlink" title="scrollTo(x,y)"></a>scrollTo(x,y)</h3><ul>
-<li><p>把内容滚动到指定的坐标</p>
-</li>
-<li><p>格式：scrollTo(xpos,ypos)</p>
-<ul>
-<li><p>xpos 必需；要在窗口文档显示区左上角显示的文档的 x 坐标；</p>
-</li>
-<li><p>ypos 必需；要在窗口文档显示区左上角显示的文档的 y 坐标 。</p>
-</li>
-</ul>
-</li>
-<li><p>网页大部分都没有水平滚动条，所以，这个x 不太常用。</p>
-</li>
-</ul>
-<h2 id="—————–-client-———————"><a href="#—————–-client-———————" class="headerlink" title="—————– client ———————"></a>—————– client ———————</h2><h2 id="client家族"><a href="#client家族" class="headerlink" title="client家族"></a>client家族</h2><h3 id="1-1-clientWidth和clientHeight"><a href="#1-1-clientWidth和clientHeight" class="headerlink" title="1.1 clientWidth和clientHeight"></a>1.1 clientWidth和clientHeight</h3><ul>
-<li><p>网页可见区域宽： document.body.clientWidth;</p>
-</li>
-<li><p>网页可见区域高： document.body.clientHeight;</p>
-</li>
-</ul>
-<h3 id="1-2-clientLeft和clientTop"><a href="#1-2-clientLeft和clientTop" class="headerlink" title="1.2 clientLeft和clientTop"></a>1.2 clientLeft和clientTop</h3><ul>
-<li><p>clientLeft，clientTop</p>
-<ul>
-<li><p>返回的是元素边框的borderWidth，</p>
-</li>
-<li><p>如果不指定一个边框或者不定位改元素，其值就为0</p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="1-3-offset、client和scroll的区别分析"><a href="#1-3-offset、client和scroll的区别分析" class="headerlink" title="1.3 offset、client和scroll的区别分析"></a>1.3 offset、client和scroll的区别分析</h3><ul>
-<li><p>left和top分析：</p>
-<ul>
-<li><p>clientLeft: 左边边框的宽度；clientTop: 上边边框的宽度</p>
-</li>
-<li><p>offsetLeft: 当前元素距离有定位的父盒子左边的距离；offsetTop: 当前元素距离有定位的父盒子上边的距离</p>
-</li>
-</ul>
-<ul>
-<li>scrollLeft: 左边滚动的长度; scrollTop: 上边滚动的长度;</li>
-</ul>
-</li>
-<li><p>width和height分析</p>
-<ul>
-<li><p>clientWidth\/Height: 内容 + 内边距</p>
-</li>
-<li><p>offsetWidth\/Height: 内容 + 内边距 + 边框</p>
-</li>
-<li><p>scrollWidth\/Height: 滚动内容的宽度和高度</p>
-</li>
-</ul>
-</li>
-</ul>
-<p><img src="http://upload-images.jianshu.io/upload_images/3793508-ad52a8a6471de4af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图解3"></p>
-
-      
-
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -354,78 +232,89 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2014/09/13/三大家族/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2015/11/03/理解HTML语义化/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
-
-
-
   
-    <article id="post-使用hexo-git搭建免费个人博客详细教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/09/12/使用hexo-git搭建免费个人博客详细教程/">使用hexo+git搭建免费个人博客详细教程</a>
-    </h1>
+    <a href="/2014/09/13/三大家族/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          三大家族
+        
+      </div>
+    </a>
   
-
-        
-        <a href="/2014/09/12/使用hexo-git搭建免费个人博客详细教程/" class="archive-article-date">
-  	<time datetime="2014-09-12T02:49:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-09-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>使用github pages服务搭建博客的好处有：</p>
-<pre><code>1.全是静态文件，访问速度快；
-2.免费方便，不用花一分钱就可以搭建一个自由的个人博客，不需要服务器不需要后台；
-3.可以随意绑定自己的域名，不仔细看的话根本看不出来你的网站是基于github的；
-4.数据绝对安全，基于github的版本管理，想恢复到哪个历史版本都行；
-5.博客内容可以轻松打包、转移、发布到其它平台等等；
-</code></pre>
-        
-          <a class="article-more-a" href="/2014/09/12/使用hexo-git搭建免费个人博客详细教程/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2014/09/12/使用hexo-git搭建免费个人博客详细教程/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
+  
+</nav>
 
 
 
 
 
   
+  
+  
+
+  
+
   
 
 
@@ -448,8 +337,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
