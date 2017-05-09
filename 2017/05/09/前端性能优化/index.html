@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>前端性能优化 | 李佳鑫的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端性能优化是个巨大的课题，如果要面面俱到的说的话，估计三天三夜说不完。所以我们就从实际的工程应用角度出发，聊我们最常遇见的前端优化问题。 Yslow是雅虎开发的基于网页性能分析浏览器插件，可以检测出网页的具体性能值，并且有著名的Yslow 23条优化规则，这23条，就够我们玩的了。 1. 减少HTTP请求次数尽量合并图片、CSS、JS。比如加载一个页面，如果有5个css文件的话，那么会发出5次h">
+  <meta name="description" content="前端性能优化是个巨大的课题，如果要面面俱到的说的话，估计三天三夜说不完。所以我们就从实际的工程应用角度出发，聊我们最常遇见的前端优化问题。">
 <meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前端性能优化">
 <meta property="og:url" content="http://yoursite.com/2017/05/09/前端性能优化/index.html">
 <meta property="og:site_name" content="李佳鑫的博客">
-<meta property="og:description" content="前端性能优化是个巨大的课题，如果要面面俱到的说的话，估计三天三夜说不完。所以我们就从实际的工程应用角度出发，聊我们最常遇见的前端优化问题。 Yslow是雅虎开发的基于网页性能分析浏览器插件，可以检测出网页的具体性能值，并且有著名的Yslow 23条优化规则，这23条，就够我们玩的了。 1. 减少HTTP请求次数尽量合并图片、CSS、JS。比如加载一个页面，如果有5个css文件的话，那么会发出5次h">
+<meta property="og:description" content="前端性能优化是个巨大的课题，如果要面面俱到的说的话，估计三天三夜说不完。所以我们就从实际的工程应用角度出发，聊我们最常遇见的前端优化问题。">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3793508-729e0f856d49b878.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3793508-10aee3b75cea1eeb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-05-09T09:43:47.520Z">
+<meta property="og:updated_time" content="2017-05-09T09:48:29.514Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端性能优化">
-<meta name="twitter:description" content="前端性能优化是个巨大的课题，如果要面面俱到的说的话，估计三天三夜说不完。所以我们就从实际的工程应用角度出发，聊我们最常遇见的前端优化问题。 Yslow是雅虎开发的基于网页性能分析浏览器插件，可以检测出网页的具体性能值，并且有著名的Yslow 23条优化规则，这23条，就够我们玩的了。 1. 减少HTTP请求次数尽量合并图片、CSS、JS。比如加载一个页面，如果有5个css文件的话，那么会发出5次h">
+<meta name="twitter:description" content="前端性能优化是个巨大的课题，如果要面面俱到的说的话，估计三天三夜说不完。所以我们就从实际的工程应用角度出发，聊我们最常遇见的前端优化问题。">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/3793508-729e0f856d49b878.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="李佳鑫的博客" type="application/atom+xml">
@@ -178,6 +178,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><strong>前端性能优化</strong>是个巨大的课题，如果要面面俱到的说的话，估计三天三夜说不完。所以我们就从实际的工程应用角度出发，聊我们最常遇见的前端优化问题。</p>
+<a id="more"></a>
 <p>Yslow是雅虎开发的基于网页性能分析浏览器插件，可以检测出网页的具体性能值，并且有著名的Yslow 23条优化规则，这23条，就够我们玩的了。</p>
 <h4 id="1-减少HTTP请求次数"><a href="#1-减少HTTP请求次数" class="headerlink" title="1. 减少HTTP请求次数"></a>1. 减少HTTP请求次数</h4><p>尽量合并图片、CSS、JS。比如加载一个页面，如果有5个css文件的话，那么会发出5次http请求，这样会让用户第一次访问你的页面的时候会长时间等待。而如果把这个5个文件合成一个的话，就只需要发出一次http请求，节省网络请求时间，加快页面的加载。</p>
 <h4 id="2-使用CDN"><a href="#2-使用CDN" class="headerlink" title="2. 使用CDN"></a>2. 使用CDN</h4><p>网站上静态资源即css、js全都使用cdn分发，图片亦然。</p>
