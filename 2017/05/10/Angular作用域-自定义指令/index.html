@@ -6,21 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Angular作用域/自定义指令 | 李佳鑫的博客</title>
+  <title>Angular作用域/自定义指令 | toWorkIT</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="控制器作用域 控制器和函数一样,也有自己的作用域.类似函数,作用域范围内先自己自身找,自己有就用自己的,自己没有的话会向上查找,找父控制器. 子级可以访问父级元素,父级元素不能访问子级元素 每个控制器(controller)都对应一个模型(Model),也就是($scope)对象,不同层级控制器下的$scope便产生了作用域. 模块之间是不可以嵌套使用的 但是控制器之间是可以嵌套使用的 使用ng-">
 <meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Angular作用域/自定义指令">
 <meta property="og:url" content="http://yoursite.com/2017/05/10/Angular作用域-自定义指令/index.html">
-<meta property="og:site_name" content="李佳鑫的博客">
+<meta property="og:site_name" content="toWorkIT">
 <meta property="og:description" content="控制器作用域 控制器和函数一样,也有自己的作用域.类似函数,作用域范围内先自己自身找,自己有就用自己的,自己没有的话会向上查找,找父控制器. 子级可以访问父级元素,父级元素不能访问子级元素 每个控制器(controller)都对应一个模型(Model),也就是($scope)对象,不同层级控制器下的$scope便产生了作用域. 模块之间是不可以嵌套使用的 但是控制器之间是可以嵌套使用的 使用ng-">
 <meta property="og:updated_time" content="2017-05-10T03:01:36.335Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Angular作用域/自定义指令">
 <meta name="twitter:description" content="控制器作用域 控制器和函数一样,也有自己的作用域.类似函数,作用域范围内先自己自身找,自己有就用自己的,自己没有的话会向上查找,找父控制器. 子级可以访问父级元素,父级元素不能访问子级元素 每个控制器(controller)都对应一个模型(Model),也就是($scope)对象,不同层级控制器下的$scope便产生了作用域. 模块之间是不可以嵌套使用的 但是控制器之间是可以嵌套使用的 使用ng-">
   
-    <link rel="alternative" href="/atom.xml" title="李佳鑫的博客" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="toWorkIT" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -47,7 +47,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-      <img src="/img/1494251003(1).jpg" class="js-avatar show" style="width: 100%;height: 100%;opacity: 1;">
+			<img src="/img/1494251003(1).jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">李佳鑫</a></h1>
@@ -58,8 +58,6 @@
 			<ul>
 			
 				<li><a href="/">主页</a></li>
-	        
-				<li><a href="/tags/随笔/">随笔</a></li>
 	        
 			</ul>
 		</nav>
@@ -91,7 +89,7 @@
 		        
 			</div>
 		</nav>
-	</header>
+	</header>		
 </div>
 
     </div>
@@ -115,8 +113,6 @@
 			
 				
 			
-				
-			
 			
 			
 			<nav class="header-nav">
@@ -137,9 +133,7 @@
 				<ul style="width: 50%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
-		        
-					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 100%"><a href="/">主页</a></li>
 		        
 				</ul>
 			</nav>
