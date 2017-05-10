@@ -6,14 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>浅析前端页面渲染机制 | toWorkIT</title>
+  <title>浅析前端页面渲染机制 | 我的地盘我做主</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="作为一个前端开发，最常见的运行环境应该是浏览器吧，为了更好的通过浏览器把优秀的产品带给用户，也为了更好的发展自己的前端职业之路，有必要了解从我们在浏览器地址栏输入网址到看到页面这期间浏览器是如何进行工作的,进而了解如何更好的优化实践，本篇主要围绕这两点展开阐述。前端页面渲染机制可谓是老生常谈，但又很有必要再谈的话题，于是还是决定写一篇，即是对知识的回顾总结，又能与大家分享，何乐而不为。网上相关类型">
 <meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浅析前端页面渲染机制">
 <meta property="og:url" content="http://yoursite.com/2017/05/09/浅析前端页面渲染机制/index.html">
-<meta property="og:site_name" content="toWorkIT">
+<meta property="og:site_name" content="我的地盘我做主">
 <meta property="og:description" content="作为一个前端开发，最常见的运行环境应该是浏览器吧，为了更好的通过浏览器把优秀的产品带给用户，也为了更好的发展自己的前端职业之路，有必要了解从我们在浏览器地址栏输入网址到看到页面这期间浏览器是如何进行工作的,进而了解如何更好的优化实践，本篇主要围绕这两点展开阐述。前端页面渲染机制可谓是老生常谈，但又很有必要再谈的话题，于是还是决定写一篇，即是对知识的回顾总结，又能与大家分享，何乐而不为。网上相关类型">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3793508-3c5cc56b9cf7bc86.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3793508-a2e2e7fdb152f599.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
@@ -28,7 +28,7 @@
 <meta name="twitter:description" content="作为一个前端开发，最常见的运行环境应该是浏览器吧，为了更好的通过浏览器把优秀的产品带给用户，也为了更好的发展自己的前端职业之路，有必要了解从我们在浏览器地址栏输入网址到看到页面这期间浏览器是如何进行工作的,进而了解如何更好的优化实践，本篇主要围绕这两点展开阐述。前端页面渲染机制可谓是老生常谈，但又很有必要再谈的话题，于是还是决定写一篇，即是对知识的回顾总结，又能与大家分享，何乐而不为。网上相关类型">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/3793508-3c5cc56b9cf7bc86.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
-    <link rel="alternative" href="/atom.xml" title="toWorkIT" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="我的地盘我做主" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -51,14 +51,14 @@
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: skyblue"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-      <img src="null" class="js-avatar show" style="width: 100%;height: 100%;opacity: 1;">
+      <img src="/img/touxiang.png" class="js-avatar show" style="width: 100%;height: 100%;opacity: 1;">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">李佳鑫</a></h1>
+		  <h1 class="header-author"><a href="/">Gecko5</a></h1>
 		</hgroup>
 		
 
@@ -73,10 +73,6 @@
     		
     			
     			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
-    			
-            
-    			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
     			
             
     			
@@ -104,17 +100,17 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: skyblue"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="null" class="js-avatar">
+				<img src="/img/touxiang.png" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">李佳鑫</h1>
+			  <h1 class="header-author js-header-author">Gecko5</h1>
 			</hgroup>
 			
 			
@@ -467,7 +463,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 李佳鑫
+    		&copy; 2017 Gecko5
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -510,25 +506,17 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
       
       
     
-      
-      
-      
-    
     
 
     <ul style="width: 70%">
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
-        
-      
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -591,38 +579,6 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
     	</section>
     
 
-    
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
     
 
     
