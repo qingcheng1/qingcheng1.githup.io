@@ -9,7 +9,7 @@
   <title>三大家族 | ljx</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="offset家族特点 只能取值，不能设置值 获取的结果是数值，不是字符 获取的时候不需要style">
-<meta name="keywords">
+<meta name="keywords" content="JS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="三大家族">
 <meta property="og:url" content="http://mingyanit.com/2014/09/13/三大家族/index.html">
@@ -18,7 +18,7 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3793508-27a9b36ab2059cbc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3793508-55fef5ae3ce8fd4b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3793508-ad52a8a6471de4af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-05-09T09:48:31.773Z">
+<meta property="og:updated_time" content="2017-05-11T08:58:41.131Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="三大家族">
 <meta name="twitter:description" content="offset家族特点 只能取值，不能设置值 获取的结果是数值，不是字符 获取的时候不需要style">
@@ -186,7 +186,7 @@
 <h2 id="offsetWidth-和-offsetHeight"><a href="#offsetWidth-和-offsetHeight" class="headerlink" title="offsetWidth 和 offsetHeight"></a>offsetWidth 和 offsetHeight</h2><ul>
 <li>获取对象自身的宽度和高度 ，包括内容、边框和内边距，即：offsetWidth = width + border + padding</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">div&#123;</div><div class="line">   width: 300px; border-right:2px solid #ccc; padding:10px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span>&#123;</div><div class="line">   <span class="attribute">width</span>: <span class="number">300px</span>; <span class="attribute">border-right</span>:<span class="number">2px</span> solid <span class="number">#ccc</span>; <span class="attribute">padding</span>:<span class="number">10px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>注意：和 div.style.width 的区别，其只能获取到行内的数值</p>
 <h3 id="offsetLeft-和-offsetTop"><a href="#offsetLeft-和-offsetTop" class="headerlink" title="offsetLeft 和 offsetTop"></a>offsetLeft 和 offsetTop</h3><ul>
 <li>距离第一个有定位的父级盒子左边和上边的距离</li>
@@ -213,7 +213,7 @@
 <li><p>兼容写法</p>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var scrollTop = window.pageYOffset || </div><div class="line">document.documentElement.scrollTop || document.body.scrollTop || 0; </div><div class="line">var scrollLeft = window.pageXOffset || </div><div class="line">document.documentElement.scrollLeft || document.body.scrollLeft || 0;</div></pre></td></tr></table></figure>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> scrollTop = <span class="built_in">window</span>.pageYOffset || </div><div class="line"><span class="built_in">document</span>.documentElement.scrollTop || <span class="built_in">document</span>.body.scrollTop || <span class="number">0</span>; </div><div class="line"><span class="keyword">var</span> scrollLeft = <span class="built_in">window</span>.pageXOffset || </div><div class="line"><span class="built_in">document</span>.documentElement.scrollLeft || <span class="built_in">document</span>.body.scrollLeft || <span class="number">0</span>;</div></pre></td></tr></table></figure>
 <h3 id="scrollTo-x-y"><a href="#scrollTo-x-y" class="headerlink" title="scrollTo(x,y)"></a>scrollTo(x,y)</h3><ul>
 <li><p>把内容滚动到指定的坐标</p>
 </li>
@@ -297,6 +297,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -371,8 +382,8 @@
     </a>
   
   
-    <a href="/2015/11/03/理解HTML语义化/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">理解HTML语义化</div>
+    <a href="/2017/05/09/瀑布流特效/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">瀑布流特效</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -470,6 +481,26 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Angular</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">JS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">team</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">other</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">demo</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>

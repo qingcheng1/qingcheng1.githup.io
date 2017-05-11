@@ -9,7 +9,7 @@
   <title>浅析前端页面渲染机制 | ljx</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="作为一个前端开发，最常见的运行环境应该是浏览器吧，为了更好的通过浏览器把优秀的产品带给用户，也为了更好的发展自己的前端职业之路，有必要了解从我们在浏览器地址栏输入网址到看到页面这期间浏览器是如何进行工作的,进而了解如何更好的优化实践，本篇主要围绕这两点展开阐述。前端页面渲染机制可谓是老生常谈，但又很有必要再谈的话题，于是还是决定写一篇，即是对知识的回顾总结，又能与大家分享，何乐而不为。网上相关类型">
-<meta name="keywords">
+<meta name="keywords" content="other">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浅析前端页面渲染机制">
 <meta property="og:url" content="http://mingyanit.com/2017/05/09/浅析前端页面渲染机制/index.html">
@@ -22,7 +22,7 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3793508-64c1ceecc1a0b5c5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3793508-9f4f3d2f579b5295.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3793508-1cefeba253a62b4f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-05-09T14:51:12.750Z">
+<meta property="og:updated_time" content="2017-05-11T08:58:32.409Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浅析前端页面渲染机制">
 <meta name="twitter:description" content="作为一个前端开发，最常见的运行环境应该是浏览器吧，为了更好的通过浏览器把优秀的产品带给用户，也为了更好的发展自己的前端职业之路，有必要了解从我们在浏览器地址栏输入网址到看到页面这期间浏览器是如何进行工作的,进而了解如何更好的优化实践，本篇主要围绕这两点展开阐述。前端页面渲染机制可谓是老生常谈，但又很有必要再谈的话题，于是还是决定写一篇，即是对知识的回顾总结，又能与大家分享，何乐而不为。网上相关类型">
@@ -247,11 +247,11 @@
 </ul>
 <p>你可能想问样式是否会阻塞脚本文件的加载执行呢？正常情况是不会的，但是存在一个问题是通常我们会在脚本中请求样式信息，但是在文档解析时，如果样式尚未加载或解析，将会得到错误信息，对于这一问题，FireFox浏览器和Webkit浏览器处理策略不同：当存在有样式文件未被加载和解析时，FireFox浏览器会阻塞所有脚本；而Webkit浏览器只会阻塞操作了改文件内声明的样式属性的脚本。</p>
 <h2 id="构建DOM树"><a href="#构建DOM树" class="headerlink" title="构建DOM树"></a>构建DOM树</h2><p><a href="http://link.zhihu.com/?target=https%3A//www.w3.org/DOM/%23what">DOM，即文档对象模型（Document Object Model）**</a>,DOM树，即文档内所有节点构成的一个树形结构。<br>假设浏览器获取返回的如下HTML文档：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;!doctype html&gt;</div><div class="line">    &lt;html&gt;</div><div class="line">    &lt;head&gt;</div><div class="line">      &lt;link rel=&quot;stylesheet&quot; href=&quot;./theme.css&quot;&gt;&lt;/link&gt;</div><div class="line">      &lt;script src=&quot;./config.js&quot;&gt;&lt;/script&gt;</div><div class="line">      &lt;title&gt;关键渲染路径&lt;/title&gt;</div><div class="line">    &lt;/head&gt;</div><div class="line">    &lt;body&gt;</div><div class="line">      &lt;h1 class=&quot;title&quot;&gt;关键渲染路径&lt;/h1&gt;</div><div class="line">      &lt;p&gt;关键渲染路径介绍&lt;/p&gt;</div><div class="line">      &lt;footer&gt;@copyright2017&lt;/footer&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">    &lt;/html&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!doctype html&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"./theme.css"</span>&gt;</span><span class="tag">&lt;/<span class="name">link</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./config.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">title</span>&gt;</span>关键渲染路径<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">"title"</span>&gt;</span>关键渲染路径<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>关键渲染路径介绍<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">footer</span>&gt;</span>@copyright2017<span class="tag">&lt;/<span class="name">footer</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>首先浏览器从上到下依次解析文档构建DOM树，如下：</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/3793508-2dbf8ea5779260ee.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 <h2 id="构建CSSOM树"><a href="#构建CSSOM树" class="headerlink" title="构建CSSOM树"></a>构建CSSOM树</h2><p><a href="http://link.zhihu.com/?target=https%3A//www.w3.org/TR/cssom-1/">CSSOM，即CSS对象模型（CSS Object Model）**</a>，CSSOM树，与DOM树结构相似，只是另外为每一个节点关联了样式信息。<br>theme.css样式内容如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">html, body &#123;</div><div class="line">    width: 100%;</div><div class="line">    height: 100%;</div><div class="line">    background-color: #fcfcfc;</div><div class="line">    &#125;</div><div class="line">    .title &#123;</div><div class="line">    font-size: 20px;</div><div class="line">    &#125;</div><div class="line">    .footer &#123;</div><div class="line">    font-size: 12px;</div><div class="line">    color: #aaa;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">html</span>, <span class="selector-tag">body</span> &#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</div><div class="line">    <span class="attribute">background-color</span>: <span class="number">#fcfcfc</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="selector-class">.title</span> &#123;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">20px</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="selector-class">.footer</span> &#123;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">12px</span>;</div><div class="line">    <span class="attribute">color</span>: <span class="number">#aaa</span>;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
 <p>构建CSSOM树如图：</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/3793508-957a843e4d0427c6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 <h2 id="执行JavaScript"><a href="#执行JavaScript" class="headerlink" title="执行JavaScript"></a>执行JavaScript</h2><p>上文已经阐述了文档解析时对脚本的处理，我们得知脚本加载，解析和执行会阻塞文档解析，而在特殊情况下样式的加载和解析也会阻塞脚本，所以现在推荐的实践是<script>标签放在</body>标签前面。</p>
@@ -297,19 +297,19 @@
 <li>访问或改变某些CSS属性（包括修改样式表或元素类名或使用JavaScript操作等方式）；</li>
 <li>浏览器窗口变化（滚动或尺寸变化）</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(&apos;body&apos;).css(&apos;padding&apos;); // reflow</div><div class="line">$(&apos;body&apos;)[0].offsetHeight; // relow</div></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$(</span><span class="string">'body'</span>).css(<span class="string">'padding'</span>); <span class="regexp">//</span> reflow</div><div class="line"><span class="variable">$(</span><span class="string">'body'</span>)[<span class="number">0</span>].offsetHeight; <span class="regexp">//</span> relow</div></pre></td></tr></table></figure>
 <p>有过CSS3动画开发经验的同学可能会有经历，如下入场动画： </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.slide-left &#123;</div><div class="line">        -webkit-transition: margin-left 1s ease-out;</div><div class="line">            -moz-transition: margin-left 1s ease-out;</div><div class="line">            -o-transition: margin-left 1s ease-out;</div><div class="line">            transition: margin-left 1s ease-out;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.slide-left</span> &#123;</div><div class="line">        <span class="attribute">-webkit-transition</span>: margin-left <span class="number">1s</span> ease-out;</div><div class="line">            <span class="attribute">-moz-transition</span>: margin-left <span class="number">1s</span> ease-out;</div><div class="line">            <span class="attribute">-o-transition</span>: margin-left <span class="number">1s</span> ease-out;</div><div class="line">            <span class="attribute">transition</span>: margin-left <span class="number">1s</span> ease-out;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
 <p>然后执行如下脚本：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var $slide = $(&apos;.slide-left&apos;);</div><div class="line">    $slide.css(&#123;</div><div class="line">        &quot;margin-left&quot;: &quot;100px&quot;</div><div class="line">    &#125;).addClass(&apos;slide-left&apos;);</div><div class="line">    $slide.css(&#123;</div><div class="line">        &quot;margin-left&quot;: &quot;10px&quot;</div><div class="line">    &#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var $slide = $(<span class="string">'.slide-left'</span>);</div><div class="line">    $slide.css(&#123;</div><div class="line">        <span class="string">"margin-left"</span>: <span class="string">"100px"</span></div><div class="line">    &#125;).addClass(<span class="string">'slide-left'</span>);</div><div class="line">    $slide.css(&#123;</div><div class="line">        <span class="string">"margin-left"</span>: <span class="string">"10px"</span></div><div class="line">    &#125;);</div></pre></td></tr></table></figure>
 <p>我们会发现并没有效果，为什么呢？因为对margin-left的修改并没有触发回流，元素margin-left值的改变被缓存，如果我们在中间强制触发回流：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var $slide = $(&apos;.slide-left&apos;);</div><div class="line">    $slide.css(&#123;</div><div class="line">        &quot;margin-left&quot;: &quot;100px&quot;</div><div class="line">    &#125;);</div><div class="line">    console.log($slide.css(&apos;padding&apos;);</div><div class="line">    $slide.addClass(&apos;slide-left&apos;);</div><div class="line">    $slide.css(&#123;</div><div class="line">        &quot;margin-left&quot;: &quot;10px&quot;</div><div class="line">    &#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var <span class="symbol">$</span>slide = <span class="symbol">$</span>(<span class="string">'.slide-left'</span>);</div><div class="line">    <span class="symbol">$</span>slide.css(&#123;</div><div class="line">        <span class="string">"margin-left"</span>: <span class="string">"100px"</span></div><div class="line">    &#125;);</div><div class="line">    console.<span class="built-in">log</span>(<span class="symbol">$</span>slide.css(<span class="string">'padding'</span>);</div><div class="line">    <span class="symbol">$</span>slide.addClass(<span class="string">'slide-left'</span>);</div><div class="line">    <span class="symbol">$</span>slide.css(&#123;</div><div class="line">        <span class="string">"margin-left"</span>: <span class="string">"10px"</span></div><div class="line">    &#125;);</div></pre></td></tr></table></figure>
 <h2 id="绘制（painting）"><a href="#绘制（painting）" class="headerlink" title="绘制（painting）"></a>绘制（painting）</h2><p>最后是绘制(paint)阶段或重绘（repaint）阶段，浏览器UI组件将遍历渲染树并调用渲染对象的绘制（paint）方法，将内容展现在屏幕上，也有可能在之后对DOM进行修改，需要重新绘制渲染对象，也就是重绘，绘制和重绘的关系可以参考布局和回流的关系。</p>
 <p><strong>全局与局部绘制</strong></p>
 <p>与布局相似，绘制也分为全局和局部绘制，即对整个渲染树或某些渲染对象进行绘制。</p>
 <p><strong>触发重绘</strong></p>
 <p>我们已经知道很多操作可能会触发回流，那么什么时候可能触发重绘呢，通常，当改变元素的视觉样式，如background-color,visibility，margin，padding或字体颜色时会触发全局或局部重绘，如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(&apos;body&apos;).css(&apos;color&apos;, &apos;red&apos;); // repaint</div><div class="line">$(&apos;body&apos;).css(&apos;margin&apos;, &apos;2px&apos;); // reflow, repaint</div></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$(</span><span class="string">'body'</span>).css(<span class="string">'color'</span>, <span class="string">'red'</span>); <span class="regexp">//</span> repaint</div><div class="line"><span class="variable">$(</span><span class="string">'body'</span>).css(<span class="string">'margin'</span>, <span class="string">'2px'</span>); <span class="regexp">//</span> reflow, repaint</div></pre></td></tr></table></figure>
 <h2 id="页面渲染优化"><a href="#页面渲染优化" class="headerlink" title="页面渲染优化"></a>页面渲染优化</h2><p>浏览器对上文介绍的关键渲染路径进行了很多优化，针对每一次变化产生尽量少的操作，还有优化判断重新绘制或布局的方式等等。</p>
 <p>在改变文档根元素的字体颜色等视觉性信息时，会触发整个文档的重绘，而改变某元素的字体颜色则只触发特定元素的重绘；改变元素的位置信息会同时触发此元素（可能还包括其兄弟元素或子级元素）的布局和重绘。某些重大改变，如更改文档根元素<html>的字体尺寸，则会触发整个文档的重新布局和重绘，据此及上文所述，推荐以下优化和实践：</p>
 <ul>
@@ -362,6 +362,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">other</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -426,11 +437,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/05/09/前端性能优化/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/05/09/瀑布流特效/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          前端性能优化
+          瀑布流特效
         
       </div>
     </a>
@@ -535,6 +546,26 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Angular</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">JS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">team</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">other</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">demo</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>

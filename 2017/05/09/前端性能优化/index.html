@@ -188,7 +188,7 @@
 <h4 id="13-删除重复的JS和CSS"><a href="#13-删除重复的JS和CSS" class="headerlink" title="13. 删除重复的JS和CSS"></a>13. 删除重复的JS和CSS</h4><p>重复调用脚本，除了增加额外的HTTP请求外，多次运算也会浪费时间。在IE和Firefox中不管脚本是否可缓存，它们都存在重复运算JavaScript的问题。</p>
 <h4 id="14-配置ETags"><a href="#14-配置ETags" class="headerlink" title="14. 配置ETags"></a>14. 配置ETags</h4><p>它用来判断浏览器缓存里的元素是否和原来服务器上的一致。比last-modified date更具有弹性，例如某个文件在1秒内修改了10次，Etag可以综合Inode(文件的索引节点(inode)数)，MTime(修改时间)和Size来精准的进行判断，避开UNIX记录MTime只能精确到秒的问题。 服务器集群使用，可取后两个参数。使用ETags减少Web应用带宽和负载</p>
 <h4 id="15-可缓存的AJAX"><a href="#15-可缓存的AJAX" class="headerlink" title="15. 可缓存的AJAX"></a>15. 可缓存的AJAX</h4><p>异步请求同样的造成用户等待，所以使用ajax请求时，要主动告诉浏览器如果该请求有缓存就去请求缓存内容。如下代码片段,     cache:true就是显式的要求如果当前请求有缓存的话，直接使用缓存</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$.ajax(&#123;</div><div class="line">     url : &apos;url&apos;,</div><div class="line">     dataType : &quot;json&quot;,</div><div class="line">     cache: true,</div><div class="line">     success : function(son, status)&#123;    </div><div class="line">             &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$.ajax(&#123;</div><div class="line">     <span class="attr">url</span> : <span class="string">'url'</span>,</div><div class="line">     <span class="attr">dataType</span> : <span class="string">"json"</span>,</div><div class="line">     <span class="attr">cache</span>: <span class="literal">true</span>,</div><div class="line">     <span class="attr">success</span> : <span class="function"><span class="keyword">function</span>(<span class="params">son, status</span>)</span>&#123;    </div><div class="line">             &#125;</div></pre></td></tr></table></figure>
 <h4 id="16-使用GET来完成AJAX请求"><a href="#16-使用GET来完成AJAX请求" class="headerlink" title="16. 使用GET来完成AJAX请求"></a>16. 使用GET来完成AJAX请求</h4><p>当使用XMLHttpRequest时，浏览器中的POST方法是一个“两步走”的过程：首先发送文件头，然后才发送数据。因此使用GET获取数据时更加有意义。</p>
 <h4 id="17-减少DOM元素数量"><a href="#17-减少DOM元素数量" class="headerlink" title="17. 减少DOM元素数量"></a>17. 减少DOM元素数量</h4><p>这是一门大学问，这里可以引申出一堆优化的细节。想要具体研究的可以看后面推荐书籍。总之大原则减少DOM数量，就会减少浏览器的解析负担。</p>
 <h4 id="18-避免404"><a href="#18-避免404" class="headerlink" title="18. 避免404"></a>18. 避免404</h4><p>比如外链的css或者js文件出现问题返回404时，会破坏浏览器对文件的并行加载。并且浏览器会把试图在返回的404响应内容中找到可能有用的部分当作JavaScript代码来执行。</p>
@@ -401,6 +401,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">ag</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
