@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://mingyanit.com">
-  <title>Archives: 2014 | ljx</title>
+  <title>js正则基础入门 | ljx</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="ljx">
-<meta property="og:url" content="http://mingyanit.com/archives/2014/index.html">
+  <meta name="description" content="基础知识我们都知道正则表达式是用来匹配合适的字符串的，那么正则是由什么组成的呢。每一个正则都是由元字符和修饰符组成的，而元字符是组成正则表达式的基本语法。">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js正则基础入门">
+<meta property="og:url" content="http://mingyanit.com/2017/05/12/js正则基础入门/index.html">
 <meta property="og:site_name" content="ljx">
+<meta property="og:description" content="基础知识我们都知道正则表达式是用来匹配合适的字符串的，那么正则是由什么组成的呢。每一个正则都是由元字符和修饰符组成的，而元字符是组成正则表达式的基本语法。">
+<meta property="og:updated_time" content="2017-05-12T05:28:46.329Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ljx">
+<meta name="twitter:title" content="js正则基础入门">
+<meta name="twitter:description" content="基础知识我们都知道正则表达式是用来匹配合适的字符串的，那么正则是由什么组成的呢。每一个正则都是由元字符和修饰符组成的，而元字符是组成正则表达式的基本语法。">
   
     <link rel="alternative" href="/atom.xml" title="ljx" type="application/atom+xml">
   
@@ -149,103 +154,169 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-js正则基础入门" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      js正则基础入门
+    </h1>
+  
+
+        
+        <a href="/2017/05/12/js正则基础入门/" class="archive-article-date">
+  	<time datetime="2017-05-12T03:56:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-12</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h3><p>我们都知道正则表达式是用来匹配合适的字符串的，那么正则是由什么组成的呢。每一个正则都是由元字符和修饰符组成的，而元字符是组成正则表达式的基本语法。</p>
+<a id="more"></a>
+<p>例如： var reg = / \d /; 这是一个用来匹配0~9之间的数字的表达式，其中\d就是一个元字符，代表0~9之间的数字。</p>
+<p>那么要想熟练的写出正则表达式，就要对常用的元字符熟练于心。下面让我们一起来了解下有哪些元字符吧。</p>
+<ul>
+<li><p>具有特殊意义的元字符<br>\ ：转义字符（转义\后面的字符所代表的含义）<br>^：以后边紧跟着的字符作为起始位置<br>$：以前边紧挨着的字符作为结束位置<br>\n ：匹配一个换行符<br>. ：除了\n以外的任意字符<br>() ：分组（()有多种作用我们放到后边专门讲，这里暂时理解为提升“优先级”，类似加减乘除运算中的()）<br>x|y ：x或者y中的一个<br>[x|y|z] ：x或者y或者z中的一个<br>[^x|y|z] ：除了x、y、z的任意字符<br>[a-z]：a~z中的任意一个字符<br>[^a-z]：除了a~z的任意一个字符<br>\d ：0~9之间的任意一个数字<br>\D ：除了0~9的任意一个字符<br>\b：匹配一个边界符<br>\w：数字、字母、下划线中的任意一个字符<br>\s：匹配一个空白字符（空格、制表符、换页符…）</p>
+</li>
+<li><p>代表出现次数的量词元字符（6个）</p>
+</li>
+</ul>
+<ul>
+<li>：出现零到多次</li>
+</ul>
+<ul>
+<li>：出现一到多次<br>？：出现零或一次<br>{n} ：出现n次<br>{n,} ：出现n到多次<br>{n,m} ：出现n到m次</li>
+</ul>
+<h4 id="小试牛刀"><a href="#小试牛刀" class="headerlink" title="小试牛刀"></a>小试牛刀</h4><ul>
+<li>记住这些元字符后，我们来简单写几个例子吧~<br>1）</li>
+</ul>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> <span class="keyword">reg</span> = /\<span class="keyword">d</span>\<span class="keyword">d</span>\<span class="keyword">d</span>/;</div><div class="line"><span class="keyword">reg</span>.<span class="keyword">test</span>(<span class="string">"123"</span>);   <span class="comment">// --&gt; false</span></div><div class="line"><span class="keyword">reg</span>.<span class="keyword">test</span>(<span class="string">"嘿喵2017"</span>);   <span class="comment">// --&gt; true</span></div><div class="line"><span class="keyword">reg</span>.<span class="keyword">test</span>(<span class="string">"1"</span>);   <span class="comment">// --&gt; false</span></div></pre></td></tr></table></figure>
+<p>（tips: test方法是RegExp.prototype上的方法，用来检测是否匹配到合适的字符串。）<br>开篇我们提到/\d/代表匹配一个0~9之间的数字，而此处reg中有三个\d，所以意为匹配三个0~9之间的数字，只有前两个符合要求。</p>
+<p>2）</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> <span class="keyword">reg</span> = /^\<span class="keyword">d</span>\<span class="keyword">d</span>\<span class="keyword">d</span>$/</div><div class="line"><span class="keyword">reg</span>.<span class="keyword">test</span>(<span class="string">"1234"</span>);   <span class="comment">// --&gt; false</span></div><div class="line"><span class="keyword">reg</span>.<span class="keyword">test</span>(<span class="string">"abc098"</span>);   <span class="comment">// --&gt; false</span></div><div class="line"><span class="keyword">reg</span>.<span class="keyword">test</span>(<span class="string">"068"</span>);   <span class="comment">// --&gt; true</span></div></pre></td></tr></table></figure>
+<p>加了^和$后，需要匹配到字符串的长度就被限定了，从开头到结尾只能有三个字符，且每个字符是0~9之间的数字，所以只有第三个测试的“068”符合要求。</p>
+<p>3）</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> <span class="keyword">reg</span> = /^[1-9]\<span class="keyword">d</span>*$/;</div><div class="line"><span class="keyword">reg</span>.<span class="keyword">test</span>(<span class="string">"0"</span>);   <span class="comment">// --&gt; false</span></div><div class="line"><span class="keyword">reg</span>.<span class="keyword">test</span>(<span class="string">"1"</span>);   <span class="comment">//  --&gt; true</span></div><div class="line"><span class="keyword">reg</span>.<span class="keyword">test</span>(<span class="string">"047"</span>);   <span class="comment">// --&gt; false</span></div><div class="line"><span class="keyword">reg</span>.<span class="keyword">test</span>(<span class="string">"45753855"</span>);    <span class="comment">// --&gt; true</span></div></pre></td></tr></table></figure>
+<p>让我们分析一下，第一位是1~9之间的数字，第二位是个0~9之间的数字并且可以出现零到多次，所以大于0并且最高位不是0的数字都能满足要求。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2014" class="archive-year">2014</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2014/09/13/三大家族/" class="archive-article-date">
-  	<time datetime="2014-09-13T02:48:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-09-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/09/13/三大家族/">三大家族</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://mingyanit.com/2017/05/12/js正则基础入门/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2014/09/12/使用hexo-git搭建免费个人博客详细教程/" class="archive-article-date">
-  	<time datetime="2014-09-12T02:49:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-09-12</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/09/12/使用hexo-git搭建免费个人博客详细教程/">使用hexo+git搭建免费个人博客详细教程</a>
-    </h1>
+    <a href="/2017/05/11/JavaScript基础知识/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          JavaScript基础知识
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2014/01/15/HTML5知识点汇总2/" class="archive-article-date">
-  	<time datetime="2014-01-15T08:56:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2014-01-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2014/01/15/HTML5知识点汇总2/">HTML5知识点汇总2</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -268,8 +339,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
