@@ -9,7 +9,7 @@
   <title>浅析前端页面渲染机制 | ljx</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="作为一个前端开发，最常见的运行环境应该是浏览器吧，为了更好的通过浏览器把优秀的产品带给用户，也为了更好的发展自己的前端职业之路，有必要了解从我们在浏览器地址栏输入网址到看到页面这期间浏览器是如何进行工作的,进而了解如何更好的优化实践，本篇主要围绕这两点展开阐述。前端页面渲染机制可谓是老生常谈，但又很有必要再谈的话题，于是还是决定写一篇，即是对知识的回顾总结，又能与大家分享，何乐而不为。网上相关类型">
-<meta name="keywords" content="other">
+<meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浅析前端页面渲染机制">
 <meta property="og:url" content="http://mingyanit.com/2017/05/09/浅析前端页面渲染机制/index.html">
@@ -22,7 +22,7 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3793508-64c1ceecc1a0b5c5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3793508-9f4f3d2f579b5295.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3793508-1cefeba253a62b4f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-05-11T08:58:32.409Z">
+<meta property="og:updated_time" content="2017-05-12T05:29:06.886Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浅析前端页面渲染机制">
 <meta name="twitter:description" content="作为一个前端开发，最常见的运行环境应该是浏览器吧，为了更好的通过浏览器把优秀的产品带给用户，也为了更好的发展自己的前端职业之路，有必要了解从我们在浏览器地址栏输入网址到看到页面这期间浏览器是如何进行工作的,进而了解如何更好的优化实践，本篇主要围绕这两点展开阐述。前端页面渲染机制可谓是老生常谈，但又很有必要再谈的话题，于是还是决定写一篇，即是对知识的回顾总结，又能与大家分享，何乐而不为。网上相关类型">
@@ -51,14 +51,14 @@
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: skyblue"></div>
+<div class="overlay" style="background: #4d4d4d"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-      <img src="/img/touxiang.png" class="js-avatar show" style="width: 100%;height: 100%;opacity: 1;">
+			<img src="/img/touxiang.png" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">ljx</a></h1>
+		  <h1 class="header-author"><a href="/">aaa</a></h1>
 		</hgroup>
 		
 
@@ -67,12 +67,18 @@
 			
 				<li><a href="/">主页</a></li>
 	        
+				<li><a href="/tags/随笔/">随笔</a></li>
+	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
     		
     			
     			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			
+            
+    			
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
     			
             
     			
@@ -93,14 +99,14 @@
 		        
 			</div>
 		</nav>
-	</header>
+	</header>		
 </div>
 
     </div>
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: skyblue"></div>
+  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -110,10 +116,12 @@
 				<img src="/img/touxiang.png" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">ljx</h1>
+			  <h1 class="header-author js-header-author">aaa</h1>
 			</hgroup>
 			
 			
+			
+				
 			
 				
 			
@@ -137,7 +145,9 @@
 				<ul style="width: 50%">
 				
 				
-					<li style="width: 100%"><a href="/">主页</a></li>
+					<li style="width: 50%"><a href="/">主页</a></li>
+		        
+					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -362,17 +372,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">other</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -437,18 +436,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/05/09/瀑布流特效/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/05/09/前端性能优化/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          瀑布流特效
+          前端性能优化
         
       </div>
     </a>
   
   
-    <a href="/2017/05/10/Angular基本属性-功能/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Angular基本属性/功能</div>
+    <a href="/2017/05/11/前端开发要注意的浏览器兼容性问题整理/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">前端开发要注意的浏览器兼容性问题整理</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -474,7 +473,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 ljx
+    		&copy; 2017 aaa
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -494,7 +493,7 @@
 		open_in_new: false,
 		root: "/",
 		innerArchive: true,
-		showTags: true
+		showTags: false
 	}
 </script>
 
@@ -517,17 +516,25 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
       
       
     
+      
+      
+      
+    
     
 
     <ul style="width: 70%">
     
     
       
-      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      
+        
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -546,22 +553,6 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Angular</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">JS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">team</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">other</a>
-              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">demo</a>
@@ -610,6 +601,38 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
     	</section>
     
 
+    
+    	<section class="tools-section tools-section-friends" q-show="friends">
+  		
+        <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+            </li>
+          
+        </ul>
+  		
+    	</section>
     
 
     
