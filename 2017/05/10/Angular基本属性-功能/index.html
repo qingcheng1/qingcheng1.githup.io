@@ -6,19 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://mingyanit.com">
-  <title>前端开发要注意的浏览器兼容性问题整理 | ljx</title>
+  <title>Angular基本属性/功能 | ljx</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="首先，我们要知道，为什么各浏览器会产生兼容性问题？ 产生这个问题的主要原因是市面上的浏览器的种类很多，但由于不同的浏览器的内核不一致，从而导致各个浏览器对网页的解析就产生了差异。 解决浏览器兼容性问题，还是从三个方面入手：html部分、css部分、js部分。">
+  <meta name="description" content="什么是AngularJsAngularJS是一款由Google公司开发维护的前端MVC框架，其克服了HTML在构建应用上的诸多不足，从而降低了开发成本提升了开发效率。">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端开发要注意的浏览器兼容性问题整理">
-<meta property="og:url" content="http://mingyanit.com/2017/05/11/前端开发要注意的浏览器兼容性问题整理/index.html">
+<meta property="og:title" content="Angular基本属性/功能">
+<meta property="og:url" content="http://mingyanit.com/2017/05/10/Angular基本属性-功能/index.html">
 <meta property="og:site_name" content="ljx">
-<meta property="og:description" content="首先，我们要知道，为什么各浏览器会产生兼容性问题？ 产生这个问题的主要原因是市面上的浏览器的种类很多，但由于不同的浏览器的内核不一致，从而导致各个浏览器对网页的解析就产生了差异。 解决浏览器兼容性问题，还是从三个方面入手：html部分、css部分、js部分。">
-<meta property="og:updated_time" content="2017-05-12T05:29:24.715Z">
+<meta property="og:description" content="什么是AngularJsAngularJS是一款由Google公司开发维护的前端MVC框架，其克服了HTML在构建应用上的诸多不足，从而降低了开发成本提升了开发效率。">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3793508-13075f9b8ca90f19.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3793508-c9b023f287753b3d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3793508-976dfe301efde9fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-05-12T05:27:16.988Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端开发要注意的浏览器兼容性问题整理">
-<meta name="twitter:description" content="首先，我们要知道，为什么各浏览器会产生兼容性问题？ 产生这个问题的主要原因是市面上的浏览器的种类很多，但由于不同的浏览器的内核不一致，从而导致各个浏览器对网页的解析就产生了差异。 解决浏览器兼容性问题，还是从三个方面入手：html部分、css部分、js部分。">
+<meta name="twitter:title" content="Angular基本属性/功能">
+<meta name="twitter:description" content="什么是AngularJsAngularJS是一款由Google公司开发维护的前端MVC框架，其克服了HTML在构建应用上的诸多不足，从而降低了开发成本提升了开发效率。">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/3793508-13075f9b8ca90f19.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="ljx" type="application/atom+xml">
   
@@ -154,91 +158,87 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-前端开发要注意的浏览器兼容性问题整理" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Angular基本属性-功能" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      前端开发要注意的浏览器兼容性问题整理
+      Angular基本属性/功能
     </h1>
   
 
         
-        <a href="/2017/05/11/前端开发要注意的浏览器兼容性问题整理/" class="archive-article-date">
-  	<time datetime="2017-05-11T09:05:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-11</time>
+        <a href="/2017/05/10/Angular基本属性-功能/" class="archive-article-date">
+  	<time datetime="2017-05-10T02:27:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-10</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>首先，我们要知道，为什么各浏览器会产生兼容性问题？</strong></p>
-<p>产生这个问题的主要原因是市面上的浏览器的种类很多，但由于不同的浏览器的内核不一致，从而导致各个浏览器对网页的解析就产生了差异。</p>
-<p><strong>解决浏览器兼容性问题，还是从三个方面入手：html部分、css部分、js部分。</strong></p>
-<a id="more"></a>
-<h3 id="html部分"><a href="#html部分" class="headerlink" title="html部分"></a>html部分</h3><ul>
-<li><p>1.最突出也是最容易想到的就是高版本的浏览器用了低版本的浏览器无法识别的元素，从而导致不能解析。这点主要体现在html5的新标签上</p>
-<p>   解决办法是：htmlshim框架可以让低于IE9的浏览器支持html5</p>
+        <h2 id="什么是AngularJs"><a href="#什么是AngularJs" class="headerlink" title="什么是AngularJs"></a>什么是AngularJs</h2><p><strong>AngularJS是一款由Google公司开发维护的前端MVC框架，其克服了HTML在构建应用上的诸多不足，从而降低了开发成本提升了开发效率。</strong><br><a id="more"></a><br><strong>AngularJS与我们之前学习的jQuery是有一定的区别的，jQuery更准确来说只一个类库（类库指的是一系列函数的集合）以DOM做为驱动（核心），而AngularJS则一个框架（诸多类库的集合）以数据和逻辑做为驱动（核心）。框架对开发的流程和模式做了约束，开发者遵照约束进行开发，更注重的实际的业务逻辑。</strong></p>
+<h4 id="AngularJS特性核心"><a href="#AngularJS特性核心" class="headerlink" title="AngularJS特性核心"></a>AngularJS特性核心</h4><p><strong>模块化</strong><br><strong>双向数据绑定</strong><br><strong>语义化标签</strong><br><strong>依赖注入等</strong></p>
+<p>Angular下载方式<br><strong><a href="https://angularjs.org/" target="_blank" rel="external">官网下载 直接点击跳转</a></strong><br><strong>通过npm下载</strong>命令为:npm install angular</p>
+<p><strong>通过bower下载</strong>命令为:bower install angular</p>
+<p>MVVM模式<br><strong>图解</strong></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3793508-13075f9b8ca90f19.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="MVVM"></p>
+<h4 id="MVC"><a href="#MVC" class="headerlink" title="MVC"></a>MVC</h4><p>MVC是一种开发模式，由模型（Model）、视图（View）、控制器（Controller）3部分构成.<br>用一种业务逻辑,数据,界面显示分离的方法组织代码,将业务逻辑聚集到一个部件里面.在改进和个性化定制界面及用户交互的同时不需要重新编写业务逻辑.</p>
+<p>采用这种开发模式为合理组织代码提供了方便、降低了代码间的耦合度、功能结构清晰可见。</p>
+<p>M模型（Model）一般用来处理数据（读取/设置），一般指操作数据库。</p>
+<p>V视图（View）一般用来展示数据，比如通过HTML展示。<br>C控制器（Controller）一般用做连接模型和视图的桥梁。</p>
+<p>MVC更多应用在后端开发程序里，后被引入到前端开发中，由于受到前端技术的限制便有了一些细节的调整，进而出现了很多MVC的衍生版（子集）如MVVM、MVW、MVP、MV*等。</p>
+<p><strong>图解</strong></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3793508-c9b023f287753b3d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="MVC"></p>
+<h3 id="Angular基本步骤"><a href="#Angular基本步骤" class="headerlink" title="Angular基本步骤"></a>Angular基本步骤</h3><ul>
+<li><p>如果你发现自己写的代码没有任何反应那就说明,你可能是没有绑定模块和控制器</p>
+</li>
+<li><p>示例代码:</p>
 </li>
 </ul>
-<ul>
-<li><p>2.img的alt属性，在图片不存在的情况下，各浏览器的解析不一致</p>
-<p>在chrome下显示的是一张破损的图片，在ff下显示的是alt的文字，而在IE中显示的是破损的图片加文字</p>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="xml">// 1.导入文件 </span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/angular.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="actionscript"></span></div><div class="line">    <span class="comment">// 2.创建模块</span></div><div class="line">    <span class="keyword">var</span> app = angular.module(<span class="string">'app'</span>, []);</div><div class="line">    <span class="comment">// 3.创建控制器</span></div><div class="line">    app.controller(<span class="string">'myController'</span>, [<span class="string">'$scope'</span>, <span class="function"><span class="keyword">function</span> <span class="params">($scope)</span> </span>&#123;</div><div class="line">        $scope.name = <span class="string">'aaa'</span>;</div><div class="line">        $scope.age = <span class="number">10</span>;</div><div class="line">    &#125;]);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 4.绑定模块 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-app</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 5.绑定控制器 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">ng-model</span>=<span class="string">"msg"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span><span class="template-variable">&#123;&#123;msg&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="内置指令"><a href="#内置指令" class="headerlink" title="内置指令"></a>内置指令</h3><ul>
+<li>HTML在构建应用（App）时存在诸多不足之处，AngularJS通过扩展一系列的HTML属性或标签来弥补这些缺陷，所谓指令就是AngularJS自定义的HTML属性或标签，这些指令都是以ng-做为前缀的，例如ng-app、ng-controller、ng-repeat等。</li>
+<li>示例代码:</li>
+</ul>
+<p>&lt; ! ———- HTML ———– &gt;</p>
+<figure class="highlight dust"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="xml">// 一般模块和控制器都绑定给body,实际开发中根据需求来</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-app</span>=<span class="string">"app"</span> <span class="attr">ng-controller</span>=<span class="string">"dataController"</span>&gt;</span></div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- ng-show 控制标签是否显示隐藏 --&gt;</span></div><div class="line"></div><div class="line">    // 标签依然存在在页面 只是隐藏 相当于给它设置了display为none</div><div class="line">    // 1.第一种写法</div><div class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">ng-show</span>=<span class="string">"isShow"</span>&gt;</span>isShow 控制标签是否显示<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    // 2.第二种写法</div><div class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">ng-show</span>=<span class="string">"false"</span>&gt;</span>isShow 控制标签是否显示<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- ng-hide 控制标签是否显示隐藏 --&gt;</span></div><div class="line">    <span class="comment">&lt;!--标签依然存在在页面 只是隐藏 相当于给它设置了display为none --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">ng-hide</span>=<span class="string">"false"</span>&gt;</span>isShow 控制标签是否显示<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- ng-if 控制标签是否存在 取值布尔值 --&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 标签不会存在在页面 相当于注释掉了 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">ng-if</span>=<span class="string">"false"</span>&gt;</span>ng-if 控制标签是否存在<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"></div><div class="line"></div><div class="line">    <span class="comment">&lt;!--</span></div><div class="line">    img ng-src 不发送请求 回头再执行一次 </div><div class="line">    img src 执行时 会现发送请求 如果路径里面写的是ng的值 就是出现404报错信息</div><div class="line">    img ng-src 不会先发送请求 会回头再来执行一次路径</div><div class="line">    <span class="template-variable">&#123;&#123; 两个大括号是插值语法 &#125;</span><span class="xml"><span class="comment">&#125;</span></span></div><div class="line">    --&gt;</div><div class="line">    ![](<span class="template-variable">&#123;&#123;path&#125;</span><span class="xml">&#125;)</span></div><div class="line">    ![](<span class="template-variable">&#123;&#123;path&#125;</span><span class="xml">&#125;)</span></div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- ng-class ng-style 控制样式 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">ng-class</span>=<span class="string">"</span></span><span class="template-variable">&#123;red:isRed,fz50:true&#125;</span><span class="xml"><span class="tag"><span class="string">"</span>&gt;</span></span><span class="template-variable">&#123;&#123;name&#125;</span><span class="xml">&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">ng-style</span>=<span class="string">"ctrSty"</span>&gt;</span><span class="template-variable">&#123;&#123;name&#125;</span><span class="xml">&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>&lt; ! ——— Style ————— &gt;</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span></div><div class="line">    <span class="selector-class">.red</span> &#123;</div><div class="line">        <span class="attribute">color</span>: goldenrod;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="selector-class">.fz50</span> &#123;</div><div class="line">        <span class="attribute">font-size</span>: <span class="number">50px</span>;</div><div class="line">    &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>&lt; ! ——— JavaScript ——- &gt;</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/angular.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="actionscript"></span></div><div class="line">    <span class="keyword">var</span> app = angular.module(<span class="string">'app'</span>, []);</div><div class="line">    app.controller(<span class="string">'dataController'</span>, [<span class="string">'$scope'</span>, <span class="function"><span class="keyword">function</span> <span class="params">($scope)</span> </span>&#123;</div><div class="line">        $scope.name = <span class="string">'惊鸿一样短暂,夏花一样绚丽'</span>;</div><div class="line">        <span class="comment">// 在模型上绑定数据 1为真 0为假 也可以写成true或者false</span></div><div class="line">        $scope.isShow = <span class="number">1</span>;</div><div class="line">        <span class="comment">// 插入图片</span></div><div class="line">        $scope.path = <span class="string">'atom-transfer.gif'</span>;</div><div class="line">        <span class="comment">// 控制样式</span></div><div class="line">        $scope.isRed = <span class="number">1</span>;</div><div class="line">        $scope.ctrSty = &#123;</div><div class="line">            color: <span class="string">'red'</span>,</div><div class="line">        &#125;</div><div class="line">    &#125;]);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="ng-include"><a href="#ng-include" class="headerlink" title="ng-include"></a>ng-include</h4><ul>
+<li><p>ng-include:开发中我们需要把一个模块单独写到一个页面当中,以便复用<br>原生HTMl是没法办到的,一般需要通过服务器来完成这个功能<br>本质是发送了一个Ajax请求 把请求的结果放到对应的标签里面</p>
 </li>
-<li><p>3.ul标签内外边距问题</p>
-<p>ul标签在IE6\IE7中，有个默认的外边距，但是在IE8以上及其他浏览器中有个默认的内边距</p>
+<li><p>示例代码:</p>
 </li>
 </ul>
-<h3 id="css部分："><a href="#css部分：" class="headerlink" title="css部分："></a>css部分：</h3><ul>
-<li><p>1.css的hack问题：主要针对IE的不同版本，不同的浏览器的写法不同</p>
-<p>IE的条件注释hack：</p>
-<!--[if IE 6]>此处内容只有IE6.0可见<![endif]-->   
-<!--[if IE 7]>此处内容只有IE7.0可见<![endif]-->
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">// 同级目录下需要创建head\body\footer的html文件引入才行</div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-include</span>=<span class="string">"'./04-head.html'"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-include</span>=<span class="string">"'./04-body.html'"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-include</span>=<span class="string">"'./04-footer.html'"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/angular.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="actionscript"></span></div><div class="line">  <span class="keyword">var</span> app = angular.module(<span class="string">'app'</span>,[]);</div><div class="line">  app.controller(<span class="string">'dataController'</span>,[<span class="string">'$scope'</span>,<span class="function"><span class="keyword">function</span> <span class="params">($scope)</span> </span>&#123;</div><div class="line"></div><div class="line">  &#125;]);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><strong>图解 —&gt; 你会发现在页面上多了三个复用模块</strong></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/3793508-976dfe301efde9fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ng-include"></p>
+<h3 id="表单指令"><a href="#表单指令" class="headerlink" title="表单指令"></a>表单指令</h3><ul>
+<li>示例代码:<br>&lt; ! ———- HTML ———– &gt;</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- ng-disabled 控制表单是否可用 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">ng-disabled</span>=<span class="string">"true"</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- ng-readonly 控制表单为只读属性 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">value</span>=<span class="string">"默认值"</span> <span class="attr">ng-readonly</span>=<span class="string">"true"</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- ng-checked 设置复选框选中状态 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">ng-checked</span>=<span class="string">"isCheck"</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>&lt; ! ——— JavaScript ——- &gt;</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/angular.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="actionscript"></span></div><div class="line">    <span class="keyword">var</span> app = angular.module(<span class="string">'app'</span>, []);</div><div class="line">    app.controller(<span class="string">'dataController'</span>, [<span class="string">'$scope'</span>, <span class="function"><span class="keyword">function</span> <span class="params">($scope)</span> </span>&#123;</div><div class="line">        $scope.isCheck = <span class="literal">true</span>;</div><div class="line">    &#125;]);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="ng-switch指令"><a href="#ng-switch指令" class="headerlink" title="ng-switch指令"></a>ng-switch指令</h3><ul>
+<li>示例代码:</li>
+</ul>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-app</span>=<span class="string">"app"</span> <span class="attr">ng-controller</span>=<span class="string">"dataController"</span>&gt;</span></span></div><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!--</span></div><div class="line">        遍历 ng-repeat</div><div class="line">        筛选对象 匹配就显示 否则隐藏 ng-switch-when</div><div class="line">    --&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">ng-repeat</span>=<span class="string">"value in course"</span> <span class="attr">ng-switch</span>=<span class="string">"value"</span>&gt;</span></div><div class="line">        <span class="comment">&lt;!-- 对</span><span class="template-variable">&#123;&#123;value&#125;&#125;</span><span class="xml"><span class="comment">进行判断 when就是条件 满足就显示 否则隐藏 --&gt;</span></span></div><div class="line">        <span class="tag">&lt;<span class="name">p</span> <span class="attr">ng-switch-when</span>=<span class="string">"html"</span>&gt;</span><span class="template-variable">&#123;&#123;value&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></div><div class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/angular.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="actionscript"></span></div><div class="line">    <span class="keyword">var</span> app = angular.module(<span class="string">'app'</span>, []);</div><div class="line">    app.controller(<span class="string">'dataController'</span>, [<span class="string">'$scope'</span>, <span class="function"><span class="keyword">function</span> <span class="params">($scope)</span> </span>&#123;</div><div class="line">        $scope.course = [<span class="string">'html'</span>, <span class="string">'css'</span>, <span class="string">'js'</span>];</div><div class="line">    &#125;]);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="数据单向绑定"><a href="#数据单向绑定" class="headerlink" title="数据单向绑定"></a>数据单向绑定</h3><ul>
+<li><strong>单向数据绑定是指将模型（Model）数据，按着写好的视图（View）模板生成HTML标签，然后追加到DOM中显示，如之前所学的artTemplate 模板引擎的工作方式。</strong></li>
+</ul>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-app</span>=<span class="string">"app"</span> <span class="attr">ng-controller</span>=<span class="string">"dataController"</span>&gt;</span></span></div><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">        <span class="comment">&lt;!-- </span></div><div class="line">        把模型的数据 展示到视图当中</div><div class="line">        1.加载时会造成闪烁 解决办法 使用ng-cloak 但是还是会闪烁,所以不建议使用这种</div><div class="line">        --&gt;</div><div class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">ng-cloak</span>&gt;</span><span class="template-variable">&#123;&#123;name&#125;&#125;</span><span class="xml"></span><span class="template-variable">&#123;&#123;age&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></div><div class="line"></div><div class="line">        <span class="comment">&lt;!--</span></div><div class="line">        2.使用ng-bind 不会造成闪烁 但是只可以绑定一个值</div><div class="line">        --&gt;</div><div class="line">        <span class="tag">&lt;&lt;<span class="attr">li</span> <span class="attr">ng-bind</span>=<span class="string">"name"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"></div><div class="line">        <span class="comment">&lt;!--</span></div><div class="line">        3.使用ng-bind-template 不会造成闪烁 可以绑定多个值</div><div class="line">        --&gt;</div><div class="line">        <span class="tag">&lt;<span class="name">li</span> <span class="attr">ng-bind-template</span>=<span class="string">"</span></span><span class="template-variable">&#123;&#123;name&#125;&#125;</span><span class="xml"><span class="tag"><span class="string"> </span></span></span><span class="template-variable">&#123;&#123;age&#125;&#125;</span><span class="xml"><span class="tag"><span class="string">"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/angular.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="actionscript"></span></div><div class="line">    <span class="keyword">var</span> app = angular.module(<span class="string">'app'</span>,[]);</div><div class="line">    app.controller(<span class="string">'dataController'</span>,[<span class="string">'$scope'</span>,<span class="function"><span class="keyword">function</span> <span class="params">($scope)</span> </span>&#123;</div><div class="line">        $scope.name = <span class="string">'xxxxxxxxxxxxxxxxx'</span>;</div><div class="line">        $scope.age = <span class="number">2000000000000000000</span>;</div><div class="line">    &#125;]);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="数据双向绑定"><a href="#数据双向绑定" class="headerlink" title="数据双向绑定"></a>数据双向绑定</h3><ul>
+<li><p>数据双向绑定：<br>模型中的数据可以绑定到视图中<br>视图中的数据也可以绑定到模型中</p>
 </li>
-<li><p>2.IE6双边距问题：IE6在浮动后，又有横向的margin，此时，该元素的外边距是其值的2倍</p>
-<p>解决办法：display:block;</p>
-</li>
-<li><p>3.IE6下图片的下方有空隙</p>
-<p>解决方法：给img设置display:block;</p>
-</li>
-<li><p>4.IE6下两个float之间会有个3px的bug</p>
-<p>解决办法：给右边的元素也设置float:left;</p>
-</li>
-<li><p>5.IE6下没有min-width的概念，其默认的width就是min-width</p>
-</li>
-<li><p>6.IE6下在使用margin:0 auto;无法使其居中</p>
-<p>解决办法：为其父容器设置text-align:center;</p>
-</li>
-<li><p>7.被点击过后的超链接不再具有hover和active属性</p>
-<p>解决办法:按lvha的顺序书写css样式</p>
-</li>
-<li><p>8.在使用绝对定位或者相对定位后，IE中设置z-index失效，原因是因为其元素依赖于父元素的z-index，但是父元素默认为0， 子高父低，所以不会改变显示的顺序</p>
-</li>
-<li><p>9.IE6下无法设置1px的行高，原因是由其默认行高引起的</p>
-<p>解决办法：为期设置overflow:hidden;或者line-height:1px;</p>
+<li><p>想要将视图的数据绑定到模型当中 必须借助表单标签</p>
 </li>
 </ul>
-<h3 id="js部分"><a href="#js部分" class="headerlink" title="js部分"></a>js部分</h3><ul>
-<li><p>1.标准的事件绑定方法函数为addEventListener，但IE下是attachEvent；</p>
-</li>
-<li><p>2.事件的捕获方式不一致，标准浏览器是由外至内，而IE是由内到外，但是最后的结果是将IE的标准定为标准</p>
-</li>
-<li><p>3.我们常说的事件处理时的event属性，在标准浏览器其是传入的，IE下由window.event获取的。并且获取目标元素的方法也不同，标准浏览器是event.target，而IE下是event.srcElement</p>
-</li>
-<li><p>4.在低版本的IE中获取的日期处理函数的值不是与1900的差值，但是在高版本的IE中和标准浏览器保持了一致，获取的值也是与1900的差值。</p>
-<p>比如：var year= new Date().getYear();</p>
-</li>
-<li><p>5.ajax的实现方式不同，这个我所理解的是获取XMLHttpRequest的不同，IE下是activeXObject</p>
-</li>
-<li><p>6.IE中不能操作tr的innerHtml</p>
-</li>
-<li><p>7.获得DOM节点的父节点、子节点的方式不同</p>
-<p>其他浏览器：parentNode  parentNode.childNodes</p>
-<p>IE：parentElement parentElement.children</p>
-</li>
-</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-app</span>=<span class="string">"app"</span> <span class="attr">ng-controller</span>=<span class="string">"dataController"</span>&gt;</span></div><div class="line"><span class="comment">&lt;!--</span></div><div class="line">    模型的数据绑定到视图当中 用ng-bind</div><div class="line">    &lt;h1 ng-bind="name"&gt;&lt;/h1&gt;</div><div class="line">--&gt;</div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 视图绑定到模型 借助表单 绑定ng-model --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">ng-model</span>=<span class="string">"userName"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">ng-model</span>=<span class="string">"pwd"</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 监听点击按钮时 实现绑定 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">ng-click</span>=<span class="string">"login()"</span>&gt;</span>登录<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/angular.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">    <span class="keyword">var</span> app = angular.module(<span class="string">'app'</span>, []);</div><div class="line">    app.controller(<span class="string">'dataController'</span>, [<span class="string">'$scope'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">$scope</span>) </span>&#123;</div><div class="line">        <span class="comment">// 模型当中定义name属性</span></div><div class="line">        $scope.name = <span class="string">'登录'</span></div><div class="line">        <span class="comment">// 事件绑定</span></div><div class="line">        $scope.login = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="comment">// 点击时可以直接打印视图绑定到模型当中的数据</span></div><div class="line">            <span class="built_in">console</span>.log($scope.userName + <span class="string">'---------'</span> + $scope.pwd);</div><div class="line">        &#125;</div><div class="line">    &#125;]);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">ng-app</span>=<span class="string">"app"</span> <span class="attr">ng-controller</span>=<span class="string">"dataController"</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 单击事件 ng-click="click($event,p)"--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">ng-click</span>=<span class="string">"click()"</span>&gt;</span>点我<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 双击事件 ng-dbclick="dbclick('dbl)"--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">ng-dblclick</span>=<span class="string">"dblclick()"</span>&gt;</span>双击<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 鼠标移入 ng-mouseEnter="mouseEnter('进入')"--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">ng-mouseenter</span>=<span class="string">"mouseEnter()"</span>&gt;</span>进入<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/angular.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">    <span class="keyword">var</span> app = angular.module(<span class="string">'app'</span>,[]);</div><div class="line">    app.controller(<span class="string">'dataController'</span>,[<span class="string">'$scope'</span>,<span class="function"><span class="keyword">function</span> (<span class="params">$scope</span>) </span>&#123;</div><div class="line"></div><div class="line">        $scope.click = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">'单击'</span>);</div><div class="line">        &#125;</div><div class="line">        $scope.dblclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">'双击'</span>);</div><div class="line">        &#125;</div><div class="line">        $scope.mouseEnter = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">'鼠标进入'</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;]);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
 
       
 
@@ -318,7 +318,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://mingyanit.com/2017/05/11/前端开发要注意的浏览器兼容性问题整理/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://mingyanit.com/2017/05/10/Angular基本属性-功能/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -332,18 +332,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/05/10/Angular基本属性-功能/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/05/09/浅析前端页面渲染机制/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Angular基本属性/功能
+          浅析前端页面渲染机制
         
       </div>
     </a>
   
   
-    <a href="/2017/05/11/前端开发中的团队合作/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">前端开发中的团队合作</div>
+    <a href="/2017/05/11/前端开发要注意的浏览器兼容性问题整理/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">前端开发要注意的浏览器兼容性问题整理</div>
       <i class="icon-circle-right"></i>
     </a>
   
