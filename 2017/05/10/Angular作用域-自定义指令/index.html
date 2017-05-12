@@ -9,13 +9,13 @@
   <title>Angular作用域/自定义指令 | ljx</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="控制器作用域 控制器和函数一样,也有自己的作用域.类似函数,作用域范围内先自己自身找,自己有就用自己的,自己没有的话会向上查找,找父控制器. 子级可以访问父级元素,父级元素不能访问子级元素 每个控制器(controller)都对应一个模型(Model),也就是($scope)对象,不同层级控制器下的$scope便产生了作用域. 模块之间是不可以嵌套使用的 但是控制器之间是可以嵌套使用的 使用ng-">
-<meta name="keywords">
+<meta name="keywords" content="Angular">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Angular作用域/自定义指令">
 <meta property="og:url" content="http://mingyanit.com/2017/05/10/Angular作用域-自定义指令/index.html">
 <meta property="og:site_name" content="ljx">
 <meta property="og:description" content="控制器作用域 控制器和函数一样,也有自己的作用域.类似函数,作用域范围内先自己自身找,自己有就用自己的,自己没有的话会向上查找,找父控制器. 子级可以访问父级元素,父级元素不能访问子级元素 每个控制器(controller)都对应一个模型(Model),也就是($scope)对象,不同层级控制器下的$scope便产生了作用域. 模块之间是不可以嵌套使用的 但是控制器之间是可以嵌套使用的 使用ng-">
-<meta property="og:updated_time" content="2017-05-12T05:27:31.316Z">
+<meta property="og:updated_time" content="2017-05-12T09:28:10.315Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Angular作用域/自定义指令">
 <meta name="twitter:description" content="控制器作用域 控制器和函数一样,也有自己的作用域.类似函数,作用域范围内先自己自身找,自己有就用自己的,自己没有的话会向上查找,找父控制器. 子级可以访问父级元素,父级元素不能访问子级元素 每个控制器(controller)都对应一个模型(Model),也就是($scope)对象,不同层级控制器下的$scope便产生了作用域. 模块之间是不可以嵌套使用的 但是控制器之间是可以嵌套使用的 使用ng-">
@@ -182,9 +182,8 @@
 <li>但是控制器之间是可以嵌套使用的</li>
 <li>使用ng-init 定义全局作用域。范围是整个模块。$rootScope</li>
 <li>示例代码: 函数作用域</li>
-<li><a id="more"></a>
-</li>
 </ul>
+<a id="more"></a>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="actionscript"></span></div><div class="line">    <span class="keyword">var</span> a = <span class="number">10</span>;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">test</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">var</span> a = <span class="number">20</span>;</div><div class="line">        <span class="keyword">var</span> b = <span class="number">10</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//alert(a);</span></div><div class="line">    test();</div><div class="line">    <span class="comment">//子级可以访问父级的作用域。</span></div><div class="line">    <span class="comment">//父级不能访问子级的作用域。</span></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
 <ul>
 <li>示例代码:控制器作用域</li>
@@ -278,6 +277,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Angular</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -459,6 +469,22 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Angular</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">JS</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">demo</a>
