@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://mingyanit.com/2017/05/12/js正则基础入门/index.html">
 <meta property="og:site_name" content="ljx">
 <meta property="og:description" content="基础知识我们都知道正则表达式是用来匹配合适的字符串的，那么正则是由什么组成的呢。每一个正则都是由元字符和修饰符组成的，而元字符是组成正则表达式的基本语法。">
-<meta property="og:updated_time" content="2017-05-12T05:28:46.329Z">
+<meta property="og:updated_time" content="2017-05-12T09:20:52.351Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js正则基础入门">
 <meta name="twitter:description" content="基础知识我们都知道正则表达式是用来匹配合适的字符串的，那么正则是由什么组成的呢。每一个正则都是由元字符和修饰符组成的，而元字符是组成正则表达式的基本语法。">
@@ -47,7 +47,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/img/touxiang.png" class="js-avatar">
+      <img src="/img/touxiang.png" class="js-avatar show" style="width: 100%;height: 100%;opacity: 1;">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">aaa</a></h1>
@@ -91,7 +91,7 @@
 		        
 			</div>
 		</nav>
-	</header>		
+	</header>
 </div>
 
     </div>
@@ -179,16 +179,32 @@
 <p>例如： var reg = / \d /; 这是一个用来匹配0~9之间的数字的表达式，其中\d就是一个元字符，代表0~9之间的数字。</p>
 <p>那么要想熟练的写出正则表达式，就要对常用的元字符熟练于心。下面让我们一起来了解下有哪些元字符吧。</p>
 <ul>
-<li><p>具有特殊意义的元字符<br>\ ：转义字符（转义\后面的字符所代表的含义）<br>^：以后边紧跟着的字符作为起始位置<br>$：以前边紧挨着的字符作为结束位置<br>\n ：匹配一个换行符<br>. ：除了\n以外的任意字符<br>() ：分组（()有多种作用我们放到后边专门讲，这里暂时理解为提升“优先级”，类似加减乘除运算中的()）<br>x|y ：x或者y中的一个<br>[x|y|z] ：x或者y或者z中的一个<br>[^x|y|z] ：除了x、y、z的任意字符<br>[a-z]：a~z中的任意一个字符<br>[^a-z]：除了a~z的任意一个字符<br>\d ：0~9之间的任意一个数字<br>\D ：除了0~9的任意一个字符<br>\b：匹配一个边界符<br>\w：数字、字母、下划线中的任意一个字符<br>\s：匹配一个空白字符（空格、制表符、换页符…）</p>
-</li>
-<li><p>代表出现次数的量词元字符（6个）</p>
-</li>
+<li>具有特殊意义的元字符</li>
+</ul>
+<p>\ ：转义字符（转义\后面的字符所代表的含义）</p>
+<p>^：以后边紧跟着的字符作为起始位置</p>
+<p>$：以前边紧挨着的字符作为结束位置</p>
+<p>\n ：匹配一个换行符</p>
+<p>. ：除了\n以外的任意字符</p>
+<p>() ：分组（()有多种作用我们放到后边专门讲，这里暂时理解为提升“优先级”，类似加减乘除运算中的()）</p>
+<p>x|y ：x或者y中的一个</p>
+<p>[x|y|z] ：x或者y或者z中的一个</p>
+<p>[^x|y|z] ：除了x、y、z的任意字符</p>
+<p>[a-z]：a~z中的任意一个字符</p>
+<p>[^a-z]：除了a~z的任意一个字符</p>
+<p>\d ：0~9之间的任意一个数字</p>
+<p>\D ：除了0~9的任意一个字符</p>
+<p>\b：匹配一个边界符</p>
+<p>\w：数字、字母、下划线中的任意一个字符</p>
+<p>\s：匹配一个空白字符（空格、制表符、换页符…）</p>
+<ul>
+<li>代表出现次数的量词元字符（6个）</li>
 </ul>
 <ul>
 <li>：出现零到多次</li>
 </ul>
 <ul>
-<li>：出现一到多次<br>？：出现零或一次<br>{n} ：出现n次<br>{n,} ：出现n到多次<br>{n,m} ：出现n到m次</li>
+<li>：出现一到多次<br>？：出现零或一次<br><code>{n}</code> ：出现n次<br><code>{n,}</code>：出现n到多次<br><code>{n,m}</code> ：出现n到m次</li>
 </ul>
 <h4 id="小试牛刀"><a href="#小试牛刀" class="headerlink" title="小试牛刀"></a>小试牛刀</h4><ul>
 <li>记住这些元字符后，我们来简单写几个例子吧~<br>1）</li>

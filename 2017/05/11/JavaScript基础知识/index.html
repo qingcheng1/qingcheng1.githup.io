@@ -20,7 +20,7 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3793508-11a7caf7591a74ec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3793508-b2776ff89ccf610f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3793508-615af2671174cdde.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-05-12T06:09:55.732Z">
+<meta property="og:updated_time" content="2017-05-12T09:19:23.338Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript基础知识">
 <meta name="twitter:description" content="js的介绍 js的作用:1.html是从语法意义上来构造网页2.css是从视觉上美化界面3.js是从交互上提升用户体验">
@@ -53,7 +53,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="/img/touxiang.png" class="js-avatar">
+      <img src="/img/touxiang.png" class="js-avatar show" style="width: 100%;height: 100%;opacity: 1;">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">aaa</a></h1>
@@ -97,7 +97,7 @@
 		        
 			</div>
 		</nav>
-	</header>		
+	</header>
 </div>
 
     </div>
@@ -205,23 +205,12 @@
 <h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><ul>
 <li>运算符:运算符是用来连接变量组成语句的符号</li>
 <li>运算符的种类:算术运算符 关系运算符 逻辑运算符</li>
-<li>算术运算符:<blockquote>
-<ol>
-<li><ul>
-<li><ul>
-<li>/ % </li>
+<li>算术运算符:</li>
 </ul>
-</li>
-</ul>
-</li>
-</ol>
-</blockquote>
-</li>
-</ul>
-<ol>
-<li>/ %的优先级高于 + -<br>3.使用小括号可以提升优先级别 </li>
-<li>+= 以及-=的认识,+= -=表示变量赋值的时候 ,如果用自己赋值给自己就可以使用+=或者-= ,例如 var a=5; a= a+5;可以替换为 a+=5;<br>5.++以及—的认识:一般++和—放在变量中使用,如果对于++,放在变量的后面,表示先使用变量,然后让变量的值加一,赋值给原来的变量;如果放在变量的前面表示先让变量的值加一,然后在赋值</li>
-</ol>
+<p>1、 + - / % </p>
+<p>2、/ %的优先级高于 + -<br>3、使用小括号可以提升优先级别</p>
+<p>4、 += 以及-=的认识,+= -=表示变量赋值的时候 ,如果用自己赋值给自己就可以使用+=或者-= ,例如 var a=5; a= a+5;可以替换为 a+=5;</p>
+<p>5、++以及—的认识:一般++和—放在变量中使用,如果对于++,放在变量的后面,表示先使用变量,然后让变量的值加一,赋值给原来的变量;如果放在变量的前面表示先让变量的值加一,然后在赋值</p>
 <ul>
 <li>关系运算符:1. &gt; &lt; &gt;= &lt;= == === != !== 2.特点:&gt;=以及&lt;=只有一个满足条件就可以; ==只需要比较内容就可以;===既要先比较类型,也比较内容,如果两个都符合才可以 != 和!==是== ===的相反;关系运算符的结果都是布尔类型;关系运算符不可以连续</li>
 <li>逻辑运算符:1.&amp;&amp; || !2.特点:逻辑运算符进行运算符的都是布尔值 ;&amp;&amp;只有两边都是真的时候结果才是真;||只有有一个是真的返回结果就是真 ;!表示取反</li>
@@ -236,7 +225,7 @@
 <li>基本if语句的形式:if(判断条件)&#123;如果条件成立执行代码 &#125;else&#123;如果条件不成立执行这里的代码 &#125;;</li>
 <li>多重if语句的形式:if(判断条件1)&#123;如果条件1成立就执行代码 &#125;else if(判断条件二)&#123;如果条件二成立就执行括号中的代码 &#125;else&#123;如果都不成立,就执行这里的代码 &#125;<br>*多重if语句的跳楼现象,也叫阻断现象:就是对于多重if语句如果,第一个条件成立了,后面的所有的条件都不再判断,</li>
 <li>阻止跳楼现象:就是写的时候,把else去掉就可以了</li>
-<li>嵌套if语句:就是if语句中有if语句,形式:<code>if(if()&amp;#123;}else&amp;#123;} )else&amp;#123;if()&amp;#123;}else&amp;#123;}};</code></li>
+<li>嵌套if语句:就是if语句中有if语句,形式:<code>if(if(){}else{} )else{if(){}else{}};</code></li>
 <li>补充知识点：+和连字符的区别，如果+两边都是数值，+表示加号，只有有一个字符，就是表示练字符，连字符的结果是字符类型</li>
 </ul>
 <h3 id="循环语句的认识"><a href="#循环语句的认识" class="headerlink" title="循环语句的认识"></a>循环语句的认识</h3><p>　- 循环语句的类型：for循环和while循环<br>　- for循环的形式：for(初始化条件；终止条件；变化值）<br>　- for的一般的实际例子<code>for(var i = 0;i &lt; 100;ｉ＋＋）{}</code><br>　- for循环的过程：就是根据初始化条件，然后和终止条件判断，如果符合终止条件，就执行大括号中的代码，然后让初始条件变化，然后和终止条件比较，如果符合，就继续执行对应的代码，直到不成立为止，停止循环。</p>
